@@ -1,17 +1,18 @@
 {
-  "permissions": {
-    "allow": [
-      "Bash(git status:*)",
-      "Bash(git diff:*)",
-      "Bash(git log:*)",
-      "Bash(git show:*)",
-      "Bash(git branch:*)",
-      "Bash(git remote -v:*)",
-      "Bash(git stash list:*)",
-      "Bash(git add:*)",
-      "Bash(git commit:*)"
-    ],
-    "deny": []
-  },
-  "env": {}
+	"permissions": {
+		"allow": [
+			"Bash(git status:*)",
+			"Bash(git diff:*)",
+			"Bash(git log:*)",
+			"Bash(git show:*)",
+			"Bash(git branch:*)",
+			"Bash(git remote -v:*)",
+			"Bash(git stash list:*)",
+			"Bash(git add:*)",
+			"Bash(git commit:*)",
+			"Bash(cat:*)"
+		],
+		"deny": []
+	},
+	"env": {}
 }
