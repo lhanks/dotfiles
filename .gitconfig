@@ -1,0 +1,5 @@
+[user]
+	email = leslie.hanks@sciencetrax.com
+	name = Leslie Hanks
+[merge "ours"]
+	driver = true

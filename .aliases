@@ -1,0 +1,3 @@
+alias stxdir='cd cd /c/dev/studytrax'
+alias stxdev='cd /c/dev/studytrax/branches/dev'
+alias stxpatch='cd /c/dev/studytrax/branches/patch'

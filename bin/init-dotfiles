@@ -203,18 +203,36 @@ if [ -f "$DOTFILES_DIR/.claude/CLAUDE.md" ]; then
 fi
 
 # ============================================================================
-# Add more dotfile links here as needed
+# Shell Configuration
 # ============================================================================
 
-# Example: Git configuration
-# if [ -f "$DOTFILES_DIR/.gitconfig" ]; then
-#     create_link "$DOTFILES_DIR/.gitconfig" "$HOME/.gitconfig" ".gitconfig"
-# fi
+log_step "Setting up shell configuration..."
 
-# Example: Bash configuration
-# if [ -f "$DOTFILES_DIR/.bashrc" ]; then
-#     create_link "$DOTFILES_DIR/.bashrc" "$HOME/.bashrc" ".bashrc"
-# fi
+# Link .bashrc
+if [ -f "$DOTFILES_DIR/.bashrc" ]; then
+    create_link "$DOTFILES_DIR/.bashrc" "$HOME/.bashrc" ".bashrc"
+fi
+
+# Link .bash_profile
+if [ -f "$DOTFILES_DIR/.bash_profile" ]; then
+    create_link "$DOTFILES_DIR/.bash_profile" "$HOME/.bash_profile" ".bash_profile"
+fi
+
+# Link .aliases
+if [ -f "$DOTFILES_DIR/.aliases" ]; then
+    create_link "$DOTFILES_DIR/.aliases" "$HOME/.aliases" ".aliases"
+fi
+
+# ============================================================================
+# Git Configuration
+# ============================================================================
+
+log_step "Setting up git configuration..."
+
+# Link .gitconfig
+if [ -f "$DOTFILES_DIR/.gitconfig" ]; then
+    create_link "$DOTFILES_DIR/.gitconfig" "$HOME/.gitconfig" ".gitconfig"
+fi
 
 echo ""
 echo "=========================================="
