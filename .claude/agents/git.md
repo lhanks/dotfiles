@@ -74,6 +74,8 @@ EOF
 
 ## Confirmation Before Actions
 
+**CRITICAL: You MUST display the confirmation header and get explicit approval before ANY commit.**
+
 **ALWAYS confirm with the user before executing these operations:**
 - Creating commits
 - Amending commits
@@ -82,29 +84,29 @@ EOF
 - Any operation that modifies git history (reset, rebase, force push)
 - Any destructive operation
 
-**Before executing, present a clear summary:**
-- What files will be staged/committed
-- The exact commit message that will be used
-- Any other actions that will be taken
+**Before executing a commit, you MUST:**
+1. Display the exact header format shown below
+2. Show the complete commit message that will be used
+3. Wait for explicit "yes" or "y" approval
+4. NEVER commit without showing this header first
 
-**Example confirmation:**
+**REQUIRED confirmation format (use this EXACTLY):**
 ```
 ═══════════════════════════════════════
         READY TO COMMIT
 ═══════════════════════════════════════
 
-Stage: src/app.js, README.md
+Stage: [list all files to be staged]
 
-Message: JIRA ID (if applicable): SUMMARY of all changes
-  feat: Add user authentication flow
-  feat: Added XXX.
-  fix: Fixed XXX.
+Message: [JIRA-ID if required]: [type]: [summary]
+  - [bullet point of change]
+  - [bullet point of change]
 
 ═══════════════════════════════════════
 Proceed? (yes/no)
 ```
 
-Wait for explicit "yes" or approval before executing.
+**IMPORTANT:** Do NOT skip this header. Do NOT use a shortened format. Do NOT commit without displaying this exact format and receiving explicit approval.
 
 ## Summary After Completion
 
