@@ -40,9 +40,9 @@ EOF
 )"
 ```
 
-## IMPORTANT: Permission Required
+## Confirmation Before Actions
 
-**ALWAYS ask for user permission before:**
+**ALWAYS confirm with the user before executing these operations:**
 - Creating commits
 - Amending commits
 - Staging or unstaging files
@@ -50,4 +50,38 @@ EOF
 - Any operation that modifies git history (reset, rebase, force push)
 - Any destructive operation
 
-Present what you plan to do and wait for explicit approval before executing.
+**Before executing, present a clear summary:**
+- What files will be staged/committed
+- The exact commit message that will be used
+- Any other actions that will be taken
+
+**Example confirmation:**
+```
+I will:
+1. Stage: src/app.js, README.md
+2. Commit with message:
+   "feat: Add user authentication flow"
+
+Proceed? (yes/no)
+```
+
+Wait for explicit "yes" or approval before executing.
+
+## Summary After Completion
+
+**ALWAYS provide a summary after completing operations:**
+- Commit hash and message
+- Files changed (added, modified, deleted)
+- Current branch state
+- Any relevant next steps
+
+**Example summary:**
+```
+Done! Committed ed328cd on main
+
+Changed:
+- 2 files modified
+- 1 file added
+
+Current state: 1 commit ahead of origin/main
+```

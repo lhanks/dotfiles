@@ -7,7 +7,9 @@
       "Bash(git show:*)",
       "Bash(git branch:*)",
       "Bash(git remote -v:*)",
-      "Bash(git stash list:*)"
+      "Bash(git stash list:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
     ],
     "deny": []
   },
