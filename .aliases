@@ -1,3 +1,31 @@
 alias stxdir='cd cd /c/dev/studytrax'
 alias stxdev='cd /c/dev/studytrax/branches/dev'
 alias stxpatch='cd /c/dev/studytrax/branches/patch'
+
+alias ll='ls -al'
+alias menu='cat ~/.aliases'
+
+# alias pingd='f() { echo ping $1.i.drzilker.com; ping $1.i.drzilker.com; };f'
+
+# alias sshrmkh='f() { ssh-keygen -f ~/.ssh/known_hosts -R "$1.i.drzilker.com"; };f'
+alias sshd='f() { ssh drzilker@$1; };f'
+alias sshr='f() { ssh root@$1; };f'
+alias ssha='f() { ssh admin@$1; };f'
+alias cida='f() { ssh-copy-id admin@$1; };f'
+
+# alias sshcka='f() { ssh-copy-id admin@$1; };f'
+# alias sshckd='f() { ssh-copy-id drzilker@$1; };f'
+# alias sshckr='f() { ssh-copy-id root@$1; };f'
+
+# Docker Commands
+alias dcu='docker-compose up -d'
+alias dcuc='docker-compose up -d --force-recreate'
+alias dcd='docker-compose down'
+alias drm='docker rm'
+alias dps='docker ps --format "table {{ .ID }}\t{{ .Image }}\t{{ .Names }}\t{{ .RunningFor }}\t{{ .Status }}\t{{ .Ports }}"'
+alias dpsf='docker ps --format "table {{ .ID }}\t{{ .Image }}\t{{ .Names }}\t{{ .RunningFor }}\t{{ .Status }}\t{{ .Ports }}" | grep $@'
+alias dl='docker logs'
+alias dc='docker-compose'
+alias dlt='docker logs traefik'
+alias dcl='docker-compose logs -f'
+alias dsh='f() { docker exec -it '$@' /bin/sh; unset -f f; };f'

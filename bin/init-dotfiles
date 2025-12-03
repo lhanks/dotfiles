@@ -234,6 +234,21 @@ if [ -f "$DOTFILES_DIR/.gitconfig" ]; then
     create_link "$DOTFILES_DIR/.gitconfig" "$HOME/.gitconfig" ".gitconfig"
 fi
 
+# ============================================================================
+# SSH Configuration
+# ============================================================================
+
+log_step "Setting up SSH configuration..."
+
+# Ensure ~/.ssh exists with correct permissions
+mkdir -p ~/.ssh
+chmod 700 ~/.ssh
+
+# Link known_hosts
+if [ -f "$DOTFILES_DIR/.ssh/known_hosts" ]; then
+    create_link "$DOTFILES_DIR/.ssh/known_hosts" "$HOME/.ssh/known_hosts" ".ssh/known_hosts"
+fi
+
 echo ""
 echo "=========================================="
 log_success "Dotfiles initialization complete!"

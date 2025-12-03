@@ -1,4 +1,6 @@
 
+# Enable native Windows symlinks in Git Bash/MSYS2
+export MSYS=winsymlinks:nativestrict
 
 # Load Angular CLI autocompletion (if available)
 command -v ng &>/dev/null && source <(ng completion script)
