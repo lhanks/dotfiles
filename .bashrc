@@ -1,7 +1,7 @@
 
 
-# Load Angular CLI autocompletion.
-source <(ng completion script)
+# Load Angular CLI autocompletion (if available)
+command -v ng &>/dev/null && source <(ng completion script)
 export PATH=$PATH:"/c/Users/leslie.hanks/AppData/Local/Programs/cursor"
 alias cursor=Cursor.exe
 alias tree='cmd //c "tree /F"'
