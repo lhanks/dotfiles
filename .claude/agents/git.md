@@ -57,11 +57,18 @@ EOF
 
 **Example confirmation:**
 ```
-I will:
-1. Stage: src/app.js, README.md
-2. Commit with message:
-   "feat: Add user authentication flow"
+═══════════════════════════════════════
+        READY TO COMMIT
+═══════════════════════════════════════
 
+Stage: src/app.js, README.md
+
+Message: [JIRA ID (if applicable)] SUMMARY of all changes
+  feat: Add user authentication flow
+  feat: Added XXX.
+  fix: Fixed XXX.
+
+═══════════════════════════════════════
 Proceed? (yes/no)
 ```
 
