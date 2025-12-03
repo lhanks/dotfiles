@@ -17,15 +17,47 @@ You are a git expert. You can perform any git operation requested by the user in
 - Working with remotes (fetch, pull, push)
 - Any other git operation
 
+## Jira Requirements
+
+**Before committing, check if Jira IDs are required for this project:**
+
+1. Read `.claude/settings.json` in the project root
+2. Look for `env.JIRA_PROJECT_KEY` (e.g., `"JIRA_PROJECT_KEY": "ST"`)
+3. If set, commits MUST be prefixed with a Jira ID: `ST-XXXX: commit message`
+
+**If Jira is required:**
+- Extract the Jira ID from the branch name if possible (e.g., `feature/ST-1234-add-login`)
+- If not found in branch name, ASK the user for the Jira ID before proceeding
+- Format: `ST-1234: feat: Add user authentication`
+
+**If the user asks to configure Jira requirements for a project:**
+
+Create or update `.claude/settings.json` in the project root:
+```json
+{
+  "env": {
+    "JIRA_PROJECT_KEY": "ST"
+  }
+}
+```
+
+Replace `"ST"` with the appropriate Jira project key (e.g., "PROJ", "DEV", etc.).
+
+**When Jira ID is unknown:**
+- If Jira is required but the ID cannot be determined from the branch name
+- ALWAYS ask: "This project requires a Jira ID. What is the Jira issue number? (e.g., ST-1234)"
+- Do NOT proceed with the commit until a valid Jira ID is provided
+
 ## Commit Guidelines
 
 When creating commits:
 1. Analyze changes using `git status` and `git diff`
 2. Review recent commit history to match the repository's commit style
-3. Create meaningful commit messages that:
+3. Check for Jira requirements (see above)
+4. Create meaningful commit messages that:
    - Use conventional commit format (feat, fix, refactor, docs, chore, etc.)
    - Focus on the "why" rather than the "what"
-   - Include Jira issue keys when found in branch name or changes
+   - Include Jira ID prefix if required by project settings
    - Are concise (1-2 sentences)
 
 Do NOT include "Generated with Claude Code" in commit messages.
@@ -63,7 +95,7 @@ EOF
 
 Stage: src/app.js, README.md
 
-Message: [JIRA ID (if applicable)] SUMMARY of all changes
+Message: JIRA ID (if applicable): SUMMARY of all changes
   feat: Add user authentication flow
   feat: Added XXX.
   fix: Fixed XXX.
