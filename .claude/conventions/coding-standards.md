@@ -12,5 +12,7 @@
 -   [TypeScript/JavaScript Coding Standards](typescript-javascript-standards.md)
 -   [SCSS/CSS Coding Standards](scss-css-standards.md)
 -   [HTML Coding Standards](html-standards.md)
+-   [Bash Coding Standards](bash-standards.md)
+-   [PowerShell Coding Standards](powershell-standards.md)
 -   [Application Standards](application-standards.md)
 -   [Refactoring Guidelines](refactoring-guidelines.md)
