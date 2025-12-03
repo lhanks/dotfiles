@@ -1,0 +1,5 @@
+# Environment files with secrets
+.envrc
+
+# Local settings (not shared)
+.claude/settings.local.json

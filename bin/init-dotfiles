@@ -203,6 +203,22 @@ if [ -f "$DOTFILES_DIR/.claude/CLAUDE.md" ]; then
 fi
 
 # ============================================================================
+# Environment Configuration
+# ============================================================================
+
+log_step "Setting up environment configuration..."
+
+# Copy .envrc.example to .envrc if .envrc doesn't exist, then link it
+if [ ! -f "$DOTFILES_DIR/.envrc" ] && [ -f "$DOTFILES_DIR/.envrc.example" ]; then
+	log_info "Creating .envrc from .envrc.example (update with your values)"
+	cp "$DOTFILES_DIR/.envrc.example" "$DOTFILES_DIR/.envrc"
+fi
+
+if [ -f "$DOTFILES_DIR/.envrc" ]; then
+	create_link "$DOTFILES_DIR/.envrc" "$HOME/.envrc" ".envrc"
+fi
+
+# ============================================================================
 # Shell Configuration
 # ============================================================================
 

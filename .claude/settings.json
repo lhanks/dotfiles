@@ -14,5 +14,6 @@
 		],
 		"deny": []
 	},
-	"env": {}
+	"env": {},
+	"alwaysThinkingEnabled": true
 }

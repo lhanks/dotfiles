@@ -12,3 +12,6 @@ export CLAUDE_CODE_MAX_OUTPUT_TOKENS=64000
 
 # source .aliases
 . ~/.aliases
+
+# source .envrc (if exists - contains sensitive env vars, not in repo)
+[[ -f ~/.envrc ]] && . ~/.envrc

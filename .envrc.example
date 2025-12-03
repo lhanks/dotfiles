@@ -1,0 +1,10 @@
+# Environment variables for development tools
+# This file is sourced by .bashrc
+#
+# Copy this file to .envrc and fill in your values:
+#   cp .envrc.example .envrc
+
+# Jira API configuration (for Claude Code integrations)
+export JIRA_EMAIL=your.email@example.com
+export JIRA_API_TOKEN="your-api-token-here"
+export JIRA_BASE_URL=https://your-org.atlassian.net
