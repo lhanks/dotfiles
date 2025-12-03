@@ -1,3 +1,10 @@
+case $- in
+    *i*) ;;
+      *) return;;
+esac
+
+# Ensure git prompt is loaded (shows branch in prompt)
+[[ -f /etc/profile.d/git-prompt.sh ]] && . /etc/profile.d/git-prompt.sh
 
 # Enable native Windows symlinks in Git Bash/MSYS2
 export MSYS=winsymlinks:nativestrict
