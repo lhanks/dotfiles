@@ -265,6 +265,30 @@ if [ -f "$DOTFILES_DIR/.ssh/known_hosts" ]; then
     create_link "$DOTFILES_DIR/.ssh/known_hosts" "$HOME/.ssh/known_hosts" ".ssh/known_hosts"
 fi
 
+# ============================================================================
+# Cursor IDE Configuration
+# ============================================================================
+
+if is_windows; then
+	log_step "Setting up Cursor IDE configuration..."
+
+	# Get Windows APPDATA path and convert to Unix path
+	CURSOR_USER_DIR="$(cygpath "$APPDATA")/Cursor/User"
+
+	# Ensure Cursor User directory exists
+	mkdir -p "$CURSOR_USER_DIR"
+
+	# Link Cursor settings.json
+	if [ -f "$DOTFILES_DIR/cursor/settings.json" ]; then
+		create_link "$DOTFILES_DIR/cursor/settings.json" "$CURSOR_USER_DIR/settings.json" "Cursor settings.json"
+	fi
+
+	# Link Cursor keybindings.json
+	if [ -f "$DOTFILES_DIR/cursor/keybindings.json" ]; then
+		create_link "$DOTFILES_DIR/cursor/keybindings.json" "$CURSOR_USER_DIR/keybindings.json" "Cursor keybindings.json"
+	fi
+fi
+
 echo ""
 echo "=========================================="
 log_success "Dotfiles initialization complete!"

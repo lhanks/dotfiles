@@ -1,0 +1,21 @@
+{
+	"window.commandCenter": true,
+	"terminal.integrated.defaultProfile.windows": "Git Bash",
+	"workbench.colorTheme": "Default Dark Modern",
+	"git.confirmSync": false,
+	"git.enableSmartCommit": true,
+	"explorer.confirmDelete": false,
+	"gitlens.graph.layout": "editor",
+	"claudeCode.preferredLocation": "sidebar",
+	"gitlens.ai.model": "gitkraken",
+	"gitlens.ai.gitkraken.model": "gemini:gemini-2.0-flash",
+	"[typescript]": {
+		"editor.defaultFormatter": "vscode.typescript-language-features"
+	},
+	"editor.gotoLocation.multipleDeclarations": "goto",
+	"editor.gotoLocation.multipleDefinitions": "goto",
+	"editor.gotoLocation.multipleImplementations": "goto",
+	"editor.gotoLocation.multipleReferences": "goto",
+	"editor.gotoLocation.multipleTypeDefinitions": "goto",
+	"editor.gotoLocation.alternativeDefinitionCommand": "editor.action.goToImplementation"
+}

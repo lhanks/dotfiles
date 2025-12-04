@@ -9,6 +9,7 @@ This repository manages:
 - Git settings
 - SSH known hosts
 - Claude Code customizations (agents, commands, settings)
+- Cursor IDE settings and keybindings
 
 ## Quick Start
 
@@ -43,6 +44,9 @@ dotfiles/
 │       ├── code-reviewer.md
 │       ├── git.md
 │       └── jira-helper.md
+├── cursor/
+│   ├── settings.json     # Cursor IDE settings
+│   └── keybindings.json  # Cursor keyboard shortcuts
 └── bin/
     └── init-dotfiles     # Installation script
 ```
@@ -82,6 +86,22 @@ dotfiles/
 **`git`** - Git expert for all operations (commit, branch, merge, rebase, etc.). Usage: `/git commit`. Always requests permission before modifying staged files or committing.
 
 **`jira-helper`** - Search, view, update, and create Jira issues
+
+### Cursor IDE Configuration
+
+**`cursor/settings.json`**
+- Terminal defaults to Git Bash
+- GitLens configuration
+- Editor navigation preferences (go to definition/implementation)
+- TypeScript formatting settings
+
+**`cursor/keybindings.json`**
+- `Ctrl+N` - Quick open (file switcher)
+- `Ctrl+D` - Duplicate selection
+- `Ctrl+B` - Go to definition/implementation
+- `Ctrl+Shift+S` - Save all files
+- `Ctrl+I` - Open Claude Code agent composer
+- `F5/F8` - Debug continue
 
 ## Requirements
 

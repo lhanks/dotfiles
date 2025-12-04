@@ -85,28 +85,37 @@ EOF
 - Any destructive operation
 
 **Before executing a commit, you MUST:**
-1. Display the exact header format shown below
+1. Display the EXACT header format shown below (copy it character-for-character)
 2. Show the complete commit message that will be used
-3. Wait for explicit "yes" or "y" approval
+3. STOP and wait for explicit "yes" or "y" approval
 4. NEVER commit without showing this header first
+5. NEVER summarize or shorten the format
 
-**REQUIRED confirmation format (use this EXACTLY):**
+**REQUIRED confirmation format (use this EXACTLY - copy the box characters), your output MUST look like this::**
 ```
 ═══════════════════════════════════════
         READY TO COMMIT
 ═══════════════════════════════════════
 
-Stage: [list all files to be staged]
+Stage:
+  - path/to/file1.ts
+  - path/to/file2.ts
 
-Message: [JIRA-ID if required]: [type]: [summary]
-  - [bullet point of change]
-  - [bullet point of change]
+Message: ST-1234: fix: Brief summary of what was fixed
+  - First specific change made
+  - Second specific change made
 
 ═══════════════════════════════════════
 Proceed? (yes/no)
 ```
 
-**IMPORTANT:** Do NOT skip this header. Do NOT use a shortened format. Do NOT commit without displaying this exact format and receiving explicit approval.
+**IMPORTANT:**
+- Do NOT skip this header
+- Do NOT use a shortened format
+- Do NOT paraphrase or summarize
+- Do NOT commit without displaying this EXACT format
+- Do NOT continue until user responds with "yes" or "y"
+- STOP after displaying the confirmation and WAIT for user response
 
 ## Summary After Completion
 
