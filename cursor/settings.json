@@ -17,5 +17,58 @@
 	"editor.gotoLocation.multipleImplementations": "goto",
 	"editor.gotoLocation.multipleReferences": "goto",
 	"editor.gotoLocation.multipleTypeDefinitions": "goto",
-	"editor.gotoLocation.alternativeDefinitionCommand": "editor.action.goToImplementation"
+	"editor.gotoLocation.alternativeDefinitionCommand": "editor.action.goToImplementation",
+	"mssql.connections": [
+		{
+			"server": "(local)",
+			"database": "studytrax_dev",
+			"authenticationType": "SqlLogin",
+			"user": "node_manager",
+			"password": "",
+			"savePassword": true,
+			"profileName": "StudyTrax Dev"
+		},
+		{
+			"authenticationType": "SqlLogin",
+			"connectTimeout": 30,
+			"applicationName": "vscode-mssql",
+			"profileName": "dev",
+			"server": "(local)",
+			"user": "node_manager",
+			"password": "",
+			"savePassword": true,
+			"database": "studytrax_dev",
+			"trustServerCertificate": true,
+			"groupId": "FD44C06B-0F79-4912-8DC2-2751FB562D1D",
+			"id": "A180377F-0D48-4A1C-A9EE-396242AB94B2"
+		},
+		{
+			"authenticationType": "SqlLogin",
+			"connectTimeout": 30,
+			"applicationName": "vscode-mssql",
+			"profileName": "patch",
+			"server": "(local)",
+			"user": "node_manager",
+			"password": "",
+			"savePassword": true,
+			"database": "studytrax_patch",
+			"trustServerCertificate": true,
+			"groupId": "FD44C06B-0F79-4912-8DC2-2751FB562D1D",
+			"id": "DFDD6ECD-AB3E-41A8-9A79-5CDBEF38F25E"
+		}
+	],
+	"database-client.defaultSelectLimit": 1000,
+	"database-client.showTotal": true,
+	"database-client.resultOrientation": "below",
+	"database-client.autoConnectOnStartup": true,
+	"mssql.connectionGroups": [
+		{
+			"name": "ROOT",
+			"id": "FD44C06B-0F79-4912-8DC2-2751FB562D1D"
+		}
+	],
+	"[sql]": {
+		"editor.defaultFormatter": "ms-mssql.mssql"
+	},
+	"workbench.editor.pinnedTabsOnSeparateRow": true
 }
